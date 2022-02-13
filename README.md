@@ -1,4 +1,8 @@
-# vuetify-test-app
+# Playground
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5f97d58c-9f7a-45d1-9ee0-1f02dd499f97/deploy-status)](https://app.netlify.com/sites/dkgian-pg/deploys)
+
+### Vuetify mini tools app
 
 - [x] todo basic
 - [ ] no task icon with text
