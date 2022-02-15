@@ -1,6 +1,7 @@
 {
-	"name": "spielplatz",
-	"version": "7.7.7",
+	"name": "todo",
+	"version": "1.0.0",
+	"author": "dkgian",
 	"private": true,
 	"scripts": {
 		"serve": "vue-cli-service serve",
