@@ -86,16 +86,18 @@ export default {
 		},
 
 		addTask() {
-			const newTask = {
-				id: Date.now(),
-				title: this.newTaskTitle,
-				text: '',
-				done: false,
+			if (this.newTaskTitle) {
+				const newTask = {
+					id: Date.now(),
+					title: this.newTaskTitle,
+					text: '',
+					done: false,
+				}
+				this.$store.dispatch(
+					'addTaskAction',
+					newTask
+				)
 			}
-			this.$store.dispatch(
-				'addTaskAction',
-				newTask
-			)
 			this.newTaskTitle = ''
 		},
 	},
