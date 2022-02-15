@@ -63,9 +63,13 @@ export default {
 
 	data: () => ({
 		newTaskTitle: '',
-		tasks: [],
 	}),
 
+	computed: {
+		tasks() {
+			return this.$store.getters.tasks
+		},
+	},
 	methods: {
 		doneTask(id) {
 			let task = this.tasks.find(
@@ -74,9 +78,10 @@ export default {
 			task.done = !task.done
 		},
 
-		deleteTask(id) {
-			this.tasks = this.tasks.filter(
-				(task) => task.id !== id
+		deleteTask(taskId) {
+			this.$store.dispatch(
+				'removeTaskAction',
+				taskId
 			)
 		},
 
@@ -87,7 +92,10 @@ export default {
 				text: '',
 				done: false,
 			}
-			this.tasks.push(newTask)
+			this.$store.dispatch(
+				'addTaskAction',
+				newTask
+			)
 			this.newTaskTitle = ''
 		},
 	},
