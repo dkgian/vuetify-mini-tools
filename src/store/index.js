@@ -28,7 +28,6 @@ export default new Vuex.Store({
 			context.commit('addTask', payload)
 		},
 		removeTaskAction(context, payload) {
-			console.log(payload)
 			context.commit('removeTask', payload)
 		},
 	},
